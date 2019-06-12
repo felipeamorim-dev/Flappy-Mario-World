@@ -1,0 +1,183 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/game_over.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/backgrounds.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/restart.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/menu.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/SuperMario256.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/SuperMario256.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+outline_size = 3
+outline_color = Color( 0.0941176, 0.0117647, 0.0117647, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="game_over" type="Node"]
+script = ExtResource( 1 )
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="background" type="Sprite" parent="canvas"]
+position = Vector2( 90.6556, 325.071 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -1, 2, 515, 431 )
+
+[node name="titulo_" type="Control" parent="canvas"]
+editor/display_folded = true
+margin_top = 60.0
+margin_right = 360.0
+margin_bottom = 210.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="linhas2" type="HBoxContainer" parent="canvas/titulo_"]
+editor/display_folded = true
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 186.0
+margin_bottom = 123.0
+
+[node name="titulo" type="Label" parent="canvas/titulo_/linhas2"]
+margin_top = 30.0
+margin_right = 28.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "g"
+align = 1
+
+[node name="titulo2" type="Label" parent="canvas/titulo_/linhas2"]
+margin_left = 32.0
+margin_top = 30.0
+margin_right = 62.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.572549, 0.729412, 1, 1 )
+text = "a"
+align = 1
+
+[node name="titulo3" type="Label" parent="canvas/titulo_/linhas2"]
+margin_left = 66.0
+margin_top = 30.0
+margin_right = 115.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.741176, 0.305882, 1 )
+text = "m"
+align = 1
+
+[node name="titulo4" type="Label" parent="canvas/titulo_/linhas2"]
+margin_left = 119.0
+margin_top = 30.0
+margin_right = 143.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.309804, 0.65098, 0.227451, 1 )
+text = "e"
+align = 1
+
+[node name="linhas3" type="HBoxContainer" parent="canvas/titulo_"]
+editor/display_folded = true
+margin_left = 204.0
+margin_top = 20.0
+margin_right = 364.0
+margin_bottom = 123.0
+
+[node name="titulo" type="Label" parent="canvas/titulo_/linhas3"]
+margin_top = 30.0
+margin_right = 32.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0.960784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "o"
+align = 1
+
+[node name="titulo2" type="Label" parent="canvas/titulo_/linhas3"]
+margin_left = 36.0
+margin_top = 30.0
+margin_right = 71.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.270588, 0.517647, 0.945098, 1 )
+text = "v"
+align = 1
+
+[node name="titulo3" type="Label" parent="canvas/titulo_/linhas3"]
+margin_left = 75.0
+margin_top = 30.0
+margin_right = 99.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.980392, 0, 1 )
+text = "e"
+align = 1
+
+[node name="titulo4" type="Label" parent="canvas/titulo_/linhas3"]
+margin_left = 103.0
+margin_top = 30.0
+margin_right = 131.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "r"
+align = 1
+
+[node name="btn_play" type="MenuButton" parent="canvas"]
+margin_left = 47.0
+margin_top = 429.0
+margin_right = 261.0
+margin_bottom = 635.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 3 )
+
+[node name="btn_play2" type="MenuButton" parent="canvas"]
+margin_left = 209.0
+margin_top = 431.0
+margin_right = 411.0
+margin_bottom = 627.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 4 )
+
+[node name="vbox" type="VBoxContainer" parent="canvas"]
+editor/display_folded = true
+margin_left = 20.0
+margin_top = 238.0
+margin_right = 360.0
+margin_bottom = 380.0
+
+[node name="last_score" type="Label" parent="canvas/vbox"]
+margin_right = 340.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 3 )
+text = "Last: 0"
+
+[node name="best_score" type="Label" parent="canvas/vbox"]
+margin_top = 52.0
+margin_right = 340.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 4 )
+text = "Best: 0"
+[connection signal="pressed" from="canvas/btn_play" to="." method="_on_btn_play_pressed"]
+[connection signal="pressed" from="canvas/btn_play2" to="." method="_on_btn_play2_pressed"]
