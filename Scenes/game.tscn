@@ -120,6 +120,8 @@ script = SubResource( 4 )
 
 [node name="musica_fx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -10.0
 autoplay = true
 [connection signal="timeout" from="spawn_pipes/timer" to="spawn_pipes" method="_on_timer_timeout"]
 [connection signal="hit" from="player" to="." method="game_over"]
+[connection signal="finished" from="musica_fx" to="." method="_on_musica_fx_finished"]

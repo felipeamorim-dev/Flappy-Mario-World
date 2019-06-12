@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pipes.png-8084c152842176c4636b09eb26b7fb7b.stex"
+path="res://.import/pipe.png-bcf4180656c09e84a4a077ca7d84d7da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pipes.png"
-dest_files=[ "res://.import/pipes.png-8084c152842176c4636b09eb26b7fb7b.stex" ]
+source_file="res://Sprites/pipe.png"
+dest_files=[ "res://.import/pipe.png-bcf4180656c09e84a4a077ca7d84d7da.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

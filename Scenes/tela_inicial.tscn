@@ -233,11 +233,12 @@ text = "d"
 align = 1
 
 [node name="btn_play" type="MenuButton" parent="canvas"]
-margin_left = 71.9718
-margin_top = 285.411
-margin_right = 513.972
-margin_bottom = 471.411
-rect_scale = Vector2( 0.5, 0.5 )
+editor/display_folded = true
+margin_left = 116.004
+margin_top = 270.674
+margin_right = 558.004
+margin_bottom = 456.674
+rect_scale = Vector2( 0.3, 0.3 )
 icon = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
