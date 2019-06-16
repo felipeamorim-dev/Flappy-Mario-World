@@ -1,24 +1,43 @@
 extends Node
 
-var last_score = 0
-var best_score = 0
+signal new_game
 
 func _ready():
 	$music_fx.play() 
-	change_last_score(game.score)
-	change_best_score(save_data.best_score)
+	atualiza_pontuacao()
 
-func change_last_score(valor):
-	last_score = valor
+
+func atualiza_pontuacao():
+	
+	if game.score > save_data.best_score:
+		save_data.best_score = game.score
+		save_data.save_score()
 	$canvas/vbox/last_score.text = "Last: " + str(game.score)
-
-func change_best_score(new_valor):
-	best_score = new_valor
-	$canvas/vbox/best_score.text = "Best: " + str(best_score)
+	$canvas/vbox/best_score.text = "Best: " + str(save_data.best_score)
 
 func _on_btn_play_pressed():
-	get_tree().change_scene("res://Scenes/game.tscn")
+	emit_signal("new_game")
+	
 
 
 func _on_btn_play2_pressed():
+	fadeIn()
+	yield($fade_in/anim, "animation_finished")
 	get_tree().change_scene("res://Scenes/tela_inicial.tscn")
+
+
+func _on_game_over_new_game():
+	game.score = 0
+	fadeIn()
+	yield($fade_in/anim, "animation_finished")
+	get_tree().change_scene("res://Scenes/game.tscn")
+
+
+func fadeIn():
+	$fade_in.show()
+	$fade_in/anim.play("fade_in")
+
+
+
+
+

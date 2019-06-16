@@ -5,6 +5,7 @@ const IMPULSE = 200
 var is_alive = true
 
 signal hit
+signal trasition
 
 func _ready():
 	add_to_group(game.GROUP_PLAYER)
@@ -44,4 +45,4 @@ func _hit():
 	emit_signal("hit")
 
 func _on_die_fx_finished():
-	get_tree().change_scene("res://Scenes/game_over.tscn")
+	emit_signal("trasition")

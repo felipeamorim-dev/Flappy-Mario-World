@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ogg_musica_tela_inicio.ogg-6d92de4c70d32567c88e193ed54085ab.oggstr"
+
+[deps]
+
+source_file="res://Samples/ogg_musica_tela_inicio.ogg"
+dest_files=[ "res://.import/ogg_musica_tela_inicio.ogg-6d92de4c70d32567c88e193ed54085ab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

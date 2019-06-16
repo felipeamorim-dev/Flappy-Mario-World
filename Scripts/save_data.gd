@@ -1,7 +1,7 @@
 extends Node
 
 const FILE_PATH = "user://game.data"
-var best_score = 0 setget set_score
+var best_score = 0 
 
 func _ready():
 	load_score()
@@ -18,7 +18,3 @@ func load_score():
 		file.open(FILE_PATH, File.READ)
 		best_score = file.get_var()
 		file.close()
-
-func set_score(new_score):
-	best_score = new_score
-	save_score()

@@ -18,11 +18,6 @@ func setScore(valor):
 
 func game_over():
 	state = game_state.STOPED
-	
-	if score > save_data.best_score:
-		save_data.best_score = score
-		print(save_data.best_score)
-	
 	$musica_fx.stop()
 	$spawn_pipes/timer.stop()
 	$player.die()
@@ -30,3 +25,10 @@ func game_over():
 
 func _on_musica_fx_finished():
 	$musica_fx.play()
+
+
+func _on_player_trasition():
+	$fade_in.show()
+	$fade_in/anim.play("fade_in")
+	yield($fade_in/anim, "animation_finished")
+	get_tree().change_scene("res://Scenes/game_over.tscn")
